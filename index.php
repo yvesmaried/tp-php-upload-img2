@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 $message = "";
 
 // Vérifier si le formulaire a été soumis
