@@ -1,4 +1,5 @@
 <?php
+session_start();
 $message = "";
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -79,45 +80,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="row justify-content-center">
                 <div class="row col-12 my-5 shadow justify-content-center rounded-lg" id="id-workarea">
                     <!------------------------------------------------- COL GAUCHE ------------------------------->
-                    <div class="col-12 col-sm-10 col-md-6 border py-2 my-5 rounded-lg text-center">
+                    <div class="col-12 border py-2 my-5 rounded-lg text-center">
                         <div>
                             <img class="preview" />
                         </div>
-                        <form action="index.php" method="post" enctype="multipart/form-data">
-                            <h2 class="typo-specialelite">Envoyer votre image</h2>
-                            <label for="fileUpload">Fichier:</label>
-                            <input type="file" data-preview=".preview" name="photo" id="fileUpload"><br><br>
-                            <button id="uploadImput" class="typo-specialelite" name="submit" type="submit"><img
-                                    href="img\icon.png">
-                                <svg class="bi bi-cloud-upload" width="1.5em" height="1.5em" viewBox="0 0 16 16"
-                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.887 6.2l-.964-.165A2.5 2.5 0 1 0 3.5 11H6v1H3.5a3.5 3.5 0 1 1 .59-6.95 5.002 5.002 0 1 1 9.804 1.98A2.501 2.501 0 0 1 13.5 12H10v-1h3.5a1.5 1.5 0 0 0 .237-2.981L12.7 7.854l.216-1.028a4 4 0 1 0-7.843-1.587l-.185.96z" />
-                                    <path fill-rule="evenodd"
-                                        d="M5 8.854a.5.5 0 0 0 .707 0L8 6.56l2.293 2.293A.5.5 0 1 0 11 8.146L8.354 5.5a.5.5 0 0 0-.708 0L5 8.146a.5.5 0 0 0 0 .708z" />
-                                    <path fill-rule="evenodd"
-                                        d="M8 6a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8A.5.5 0 0 1 8 6z" />
-                                </svg>
-                                Upload
-                                <svg class="bi bi-cloud-upload" width="1.5em" height="1.5em" viewBox="0 0 16 16"
-                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.887 6.2l-.964-.165A2.5 2.5 0 1 0 3.5 11H6v1H3.5a3.5 3.5 0 1 1 .59-6.95 5.002 5.002 0 1 1 9.804 1.98A2.501 2.501 0 0 1 13.5 12H10v-1h3.5a1.5 1.5 0 0 0 .237-2.981L12.7 7.854l.216-1.028a4 4 0 1 0-7.843-1.587l-.185.96z" />
-                                    <path fill-rule="evenodd"
-                                        d="M5 8.854a.5.5 0 0 0 .707 0L8 6.56l2.293 2.293A.5.5 0 1 0 11 8.146L8.354 5.5a.5.5 0 0 0-.708 0L5 8.146a.5.5 0 0 0 0 .708z" />
-                                    <path fill-rule="evenodd"
-                                        d="M8 6a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8A.5.5 0 0 1 8 6z" />
-                                </svg>
-                            </button><br><br>
-                            <p><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .gif, .png sont autorisés
-                                jusqu'à une
-                                taille maximale de 1 Mo.</p>
-                        </form>
                         <p id="messageresult" class="typo-specialelite h5"><b><?= $message ?></b></p>
-                    </div>
-                    <!------------------------------------------------- COL DROITE ------------------------------->
-                    <div class="col-12 col-sm-10 col-md-6 my-5 rounded-lg" onclick="playsound()">
-                        <img class="rounded-lg" src="img\cover-crop-circle.jpg" alt="cover-crop-circle-Astronogeek" width="100%">
                     </div>
                 </div>
             </div>
