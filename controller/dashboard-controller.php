@@ -11,8 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $filesize = $_FILES["photo"]["size"];
         $filetmpname = $_FILES["photo"]["tmp_name"];
         $filemime = mime_content_type ( $filetmpname );
-
-
         // Recuperation de l'extension du fichier
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
 
@@ -61,7 +59,6 @@ function TailleDossier($Rep)
 $Dossier);
         //Ajoute la taille du fichier
         else $Taille += filesize($Rep.'/'.$Dossier);
-
       }
     }
     closedir($Racine);

@@ -18,7 +18,7 @@ require_once 'controller\dashboard-controller.php';
 </head>
 
 <body>
-
+    
     <!------------------------------------------------- HEADER ------------------------------->
     <header>
         <div id="img-accueil" class="container-fluid">
@@ -67,14 +67,17 @@ require_once 'controller\dashboard-controller.php';
                             </button><br><br>
                             <p><b>Formats autorisés : </b>.jpg, .jpeg, .gif, .png</p>
                             <p><b>Taille max unitaire : </b><?= round(($maxSize / (1024 * 1024)), 2) ?> Mo.</p>
-                            <p><b>Taille dossier : </b><?= round((TailleDossier("upload") / (1024 * 1024)), 2) ?>Mo / <?= round(($maxFolderSize / (1024 * 1024)), 2) ?>Mo.</p>
+                            <p><b>Taille dossier : </b><?= round((TailleDossier("upload") / (1024 * 1024)), 2) ?>Mo /
+                                <?= round(($maxFolderSize / (1024 * 1024)), 2) ?>Mo.</p>
                         </form>
                         <p id="messageresult" class="typo-specialelite h5"><b><?= $message ?></b></p>
-                        <a href="gallery.php"><button type="button">Galerie</button></a> <a href="deconnexion.php"><button type="button">deconnexion</button></a>
+                        <a href="gallery.php"><button type="button">Galerie</button></a> <a
+                            href="deconnexion.php"><button type="button">deconnexion</button></a>
                     </div>
                     <!------------------------------------------------- COL DROITE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 my-5 rounded-lg" onclick="playsound()">
-                        <img class="rounded-lg" src="img\cover-crop-circle.jpg" alt="cover-crop-circle-Astronogeek" width="100%">
+                        <img class="rounded-lg" src="img\cover-crop-circle.jpg" alt="cover-crop-circle-Astronogeek"
+                            width="100%">
                     </div>
                 </div>
             </div>
