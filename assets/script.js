@@ -14,6 +14,10 @@ $(function () {
 		};
 	});
 });
+function playsound(){
+	sound = new Audio("assets/x-files.wav");
+    sound.play();
+};
 // ============================photoswipe=============================== \\
 let pswpElement = document.querySelectorAll('.pswp')[0];
 // build items array

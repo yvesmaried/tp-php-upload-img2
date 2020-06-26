@@ -37,8 +37,8 @@ require_once 'controller\deconnexion-controller.php';
                 <div class="row col-12 my-5 shadow justify-content-center rounded-lg" id="id-workarea">
                     <!------------------------------------------------- COL GAUCHE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 border py-2 my-5 rounded-lg text-center">
-                        <h2>vous etes deconnecter</h2>
-                        <a href="index.php"><button type="button">Acceuil</button></a>
+                        <h2 class="typo-specialelite">Vous êtes déconnecter</h2>
+                        <a href="index.php"><button class="btn-perso typo-specialelite" type="button">Acceuil</button></a>
                     </div>
                     <!------------------------------------------------- COL DROITE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 my-5 rounded-lg" onclick="playsound()">
