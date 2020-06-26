@@ -39,7 +39,7 @@ require_once 'controller\dashboard-controller.php';
                         <div>
                             <img class="preview" />
                         </div>
-                        <form action="index.php" method="post" enctype="multipart/form-data">
+                        <form action="" method="post" enctype="multipart/form-data">
                             <h2 class="typo-specialelite">Envoyer votre image</h2>
                             <label for="fileUpload">Fichier:</label>
                             <input type="file" data-preview=".preview" name="photo" id="fileUpload"><br><br>
@@ -65,9 +65,9 @@ require_once 'controller\dashboard-controller.php';
                                         d="M8 6a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8A.5.5 0 0 1 8 6z" />
                                 </svg>
                             </button><br><br>
-                            <p><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .gif, .png sont autorisés
-                                jusqu'à une
-                                taille maximale de 1 Mo.</p>
+                            <p><b>Formats autorisés : </b>.jpg, .jpeg, .gif, .png</p>
+                            <p><b>Taille max unitaire : </b><?= round(($maxSize / (1024 * 1024)), 2) ?> Mo.</p>
+                            <p><b>Taille dossier : </b><?= round((TailleDossier("upload") / (1024 * 1024)), 2) ?>Mo / <?= round(($maxFolderSize / (1024 * 1024)), 2) ?>Mo.</p>
                         </form>
                         <p id="messageresult" class="typo-specialelite h5"><b><?= $message ?></b></p>
                         <a href="gallery.php"><button type="button">Galerie</button></a> <a href="deconnexion.php"><button type="button">deconnexion</button></a>

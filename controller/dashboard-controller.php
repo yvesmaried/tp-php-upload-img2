@@ -1,10 +1,5 @@
 <?php
 
-$accountArray = array('guest' => 'soleil123','admin' => 'lapinpgm');
-
-$message = "";
-$maxSize = 1 * 1024 * 1024;
-$maxFolderSize = 40 * 1024 * 1024;
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -26,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Vérifie la taille du fichier - 1Mo maximum
            
-            if ($filesize < $maxSize) {
+            if ($filesize <= $maxSize && TailleDossier("upload")+$filesize <= $maxFolderSize) {
 
                 // Vérifie le type MIME du fichier
                 if (in_array($filemime, $allowed)) {
@@ -41,13 +36,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 } else {
                     $message = "Erreur: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.";
                 }
-            }else {
+            }else if($filesize > $maxSize){
                 $message = "Erreur: La taille du fichier est supérieure à 1Mo ( il fait : " . $filesize / (1024 * 1024) . " Mo)";
-            }          
+            }else{
+                $message = "Erreur: La taille du fichier correct, mais le dossier depassera la limite";
+            }     
         }else {
             $message = "Erreur: Veuillez sélectionner un format de fichier valide.";
         };        
     } else {      
         $message = "Erreur: " . $_FILES["photo"]["error"] . " / fichier invalide";
     }
+}
+function TailleDossier($Rep)
+{
+    $Racine=opendir($Rep);
+    $Taille=0;
+    while($Dossier = readdir($Racine))
+    {
+      if ( $Dossier != '..' And $Dossier !='.' )
+      {
+        //Ajoute la taille du sous dossier
+        if(is_dir($Rep.'/'.$Dossier)) $Taille += TailleDossier($Rep.'/'.
+$Dossier);
+        //Ajoute la taille du fichier
+        else $Taille += filesize($Rep.'/'.$Dossier);
+
+      }
+    }
+    closedir($Racine);
+    return $Taille;
 }
