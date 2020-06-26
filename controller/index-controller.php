@@ -101,6 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </form>
                         <a href="gallery.php">gallery</a>
                         <a href="dashboard.php">dashboard</a>
+                        <a href="deconnexion.php">deconnection</a>
                     </div>
                     <!------------------------------------------------- COL DROITE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 my-5 rounded-lg" onclick="playsound()">
