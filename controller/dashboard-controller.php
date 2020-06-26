@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $accountArray = array('guest' => 'soleil123','admin' => 'lapinpgm');
 
 $message = "";

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'my-config.php';
 require_once 'controller\no-allowed-controller.php';
 ?>
