@@ -18,7 +18,7 @@ require_once 'controller\index-controller.php';
 </head>
 
 <body>
-
+    
     <!------------------------------------------------- HEADER ------------------------------->
     <header>
         <div id="img-accueil" class="container-fluid">

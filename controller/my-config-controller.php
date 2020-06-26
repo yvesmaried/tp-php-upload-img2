@@ -1,13 +1,11 @@
 <?php
 session_start();
 $accountArray = array('guest' => 'soleil123','admin' => 'lapinpgm');
-
 $message = "";
 $maxSize = 1 * 1024 * 1024;
 $maxFolderSize = 40 * 1024 * 1024;
 // Vérifier si le formulaire a été soumis
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+if ($_SERVER["REQUEST_METHOD"] == "POST") {    
     // Vérifie si le fichier a été uploadé sans erreur.
     if (isset($_FILES["photo"]) && $_FILES["photo"]["error"] == 0) {
         $allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png");
@@ -16,18 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $filesize = $_FILES["photo"]["size"];
         $filetmpname = $_FILES["photo"]["tmp_name"];
         $filemime = mime_content_type ( $filetmpname );
-
-
         // Recuperation de l'extension du fichier
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
-
         // Vérifie l'extension du fichier
         if (array_key_exists($ext, $allowed)) {
-
-            // Vérifie la taille du fichier - 1Mo maximum
-           
+            // Vérifie la taille du fichier - 1Mo maximum   
             if ($filesize < $maxSize) {
-
                 // Vérifie le type MIME du fichier
                 if (in_array($filemime, $allowed)) {
 
