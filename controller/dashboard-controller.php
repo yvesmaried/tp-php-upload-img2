@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     move_uploaded_file($filetmpname, "upload/" . $filename);
                     $message = "Votre image a été téléchargé avec succès.<br><br>
                     <a href=" . "upload/" . $filename . " target=\"_blank\">
-                        <button onclick=\"playsound()\" class=\"typo-specialelite btn-linkimg\"type=\"button\">lien vers l'image</button>
+                        <button onclick=\"playsound()\" class=\"typo-specialelite btn-perso\"type=\"button\">lien vers l'image</button>
                     </a>";
                 } else {
                     $message = "Erreur: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.";

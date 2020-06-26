@@ -98,7 +98,10 @@ require_once 'controller\gallery-controller.php';
                                 </div>
                             </div>
                         </div>
-                        <a href="deconnexion.php"><button type="button">deconnexion</button></a>
+                        <a href="index.php"><button class="btn-perso typo-specialelite" type="button">Acceuil</button></a>
+                        <a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a>
+                        <a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a>
+                        <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
                     </div>
                 </div>
             </div>

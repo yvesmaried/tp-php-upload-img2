@@ -36,10 +36,13 @@ require_once 'controller\no-allowed-controller.php';
                 <div class="row col-12 my-5 shadow justify-content-center rounded-lg" id="id-workarea">
                     <!------------------------------------------------- COL GAUCHE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 border py-2 my-5 rounded-lg text-center">
-                        <h2>Non Autorisé</h2>
-                        <p>Vous n'avez pas les accreditations pour accéder a cette page, il vous faut le laisser passer A38</p>
+                        <h2 class="typo-specialelite">Non Autorisé</h2>
+                        <p class="typo-specialelite">Vous n'avez pas les accreditations pour accéder a cette page, il vous faut le laisser passer A38</p>
 
-                        <a href="gallery.php"><button type="button">Galerie</button></a> <a href="deconnexion.php"><button type="button">deconnexion</button></a>
+                        <a href="index.php"><button class="btn-perso typo-specialelite" type="button">Acceuil</button></a>
+                        <a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a>
+                        <a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a>
+                        <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
                     </div>
                     <!------------------------------------------------- COL DROITE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 my-5 rounded-lg" onclick="playsound()">
