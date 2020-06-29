@@ -45,13 +45,14 @@ require_once 'controller\index-controller.php';
                             </div>
                             <div class="form-group col-md-7">
                                 <label class="typo-specialelite font-weight-bold" for="password">Password :</label>
-                                <input class="form-control" id="password" type="text" name="password"
+                                <input class="form-control" id="password" type="password" name="password"
                                     placeholder="mot de passe">
                             </div>
                             <div class="col-md-7">
                                 <input class="btn-perso typo-specialelite" type="submit" value="connexion">
                             </div>
                         </form>
+                        <p><?= $message ?></p>
                         <a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a>
                         <a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a>
                         <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
