@@ -39,11 +39,13 @@ require_once 'controller\gallery-controller.php';
                     <!------------------------------------------------- COL GAUCHE ------------------------------->
                     <div class="col-12 border py-2 my-5 rounded-lg text-center">
                         <h2>Gallerie</h2>
-                        <a href="upload\aaaaaaaa.jpg" data-lightbox="image-1" data-title="Mycaption"><img src="upload\aaaaaaaa.jpg" class="vignetteGallery" alt=""></a>
-                        <a href="upload\bovis-shark.jpg" data-lightbox="image-1" data-title="Mycaption"><img src="upload\bovis-shark.jpg" class="vignetteGallery" alt=""></a>
+                        <?php 
+                        foreach (scandir('upload') as $key => $value){       
+                        ?>
+                        <a href="upload\<?= $value ?>" data-lightbox="image-1" data-title="Mycaption"><img src="upload\<?= $value ?>" class="vignetteGallery" alt=""></a>
+                        <?php }; ?>
                         <?php if (isset($_SESSION["admin"])){ ?><a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a> <?php }; ?>
                         <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
-
                     </div>
                 </div>
             </div>
