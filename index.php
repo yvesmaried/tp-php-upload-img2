@@ -13,7 +13,7 @@ require_once 'controller\index-controller.php';
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="assets\style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-    <link href="path/to/lightbox.css" rel="stylesheet" />
+    <link href="assets/lightbox.css" rel="stylesheet" />
     <link href="img\icon.png" rel="icon">
     <title>tp upload</title>
 </head>
@@ -87,7 +87,7 @@ require_once 'controller\index-controller.php';
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
     <script src="assets/script.js"></script>
-    <script src="path/to/lightbox.js"></script>
+    <script src="assets/lightbox.js"></script>
 </body>
 
 </html>

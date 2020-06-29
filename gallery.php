@@ -14,7 +14,7 @@ require_once 'controller\gallery-controller.php';
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="assets\style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-    <link href="path/to/lightbox.css" rel="stylesheet" />
+    <link href="assets/lightbox.css" rel="stylesheet" />
     <link href="img\icon.png" rel="icon">
     <title>tp upload</title>
     <!-- Core CSS file -->
@@ -48,6 +48,7 @@ require_once 'controller\gallery-controller.php';
                     <div class="col-12 border py-2 my-5 rounded-lg text-center">
                         <h2>Gallerie</h2>
                         <a href="upload\aaaaaaaa.jpg" data-lightbox="image-1" data-title="My caption"><img src="upload\aaaaaaaa.jpg" alt=""></a>
+                        <a href="upload\bovis-shark.jpg" data-lightbox="image-2" data-title="My caption"><img src="upload\bovis-shark.jpg" alt=""></a>
                         <a href="index.php"><button class="btn-perso typo-specialelite" type="button">Acceuil</button></a>
                         <a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a>
                         <a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a>
@@ -77,7 +78,7 @@ require_once 'controller\gallery-controller.php';
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
     <script src="assets/script.js"></script>
-    <script src="path/to/lightbox.js"></script>
+    <script src="assets/lightbox.js"></script>
 </body>
 
 </html>
