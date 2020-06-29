@@ -14,6 +14,7 @@ require_once 'controller\gallery-controller.php';
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="assets\style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="path/to/lightbox.css" rel="stylesheet" />
     <link href="img\icon.png" rel="icon">
     <title>tp upload</title>
     <!-- Core CSS file -->
@@ -46,58 +47,7 @@ require_once 'controller\gallery-controller.php';
                     <!------------------------------------------------- COL GAUCHE ------------------------------->
                     <div class="col-12 border py-2 my-5 rounded-lg text-center">
                         <h2>Gallerie</h2>
-                        <div class="test">
-                        </div>
-                        <!-- Root element of PhotoSwipe. Must have class pswp. -->
-                        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-                            <!-- Background of PhotoSwipe. 
-     It's a separate element as animating opacity is faster than rgba(). -->
-                            <div class="pswp__bg"></div>
-                            <!-- Slides wrapper with overflow:hidden. -->
-                            <div class="pswp__scroll-wrap">
-                                <!-- Container that holds slides. 
-        PhotoSwipe keeps only 3 of them in the DOM to save memory.
-        Don't modify these 3 pswp__item elements, data is added later on. -->
-                                <div class="pswp__container">
-                                    <div class="pswp__item"></div>
-                                    <div class="pswp__item"></div>
-                                    <div class="pswp__item"></div>
-                                </div>
-                                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-                                <div class="pswp__ui pswp__ui--hidden">
-
-                                    <div class="pswp__top-bar">
-                                           <!--  Controls are self-explanatory. Order can be changed. -->
-                                        <div class="pswp__counter"></div>
-                                        <button class="pswp__button pswp__button--close" title="Close (Esc)">fermer</button>
-                                        <button class="pswp__button pswp__button--share" title="Share">partager</button>
-                                        <button class="pswp__button pswp__button--fs"
-                                            title="Toggle fullscreen"></button>
-                                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out">zoom in/out</button>
-                                        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                                        <!-- element will get class pswp__preloader--active when preloader is running -->
-                                        <div class="pswp__preloader">
-                                            <div class="pswp__preloader__icn">
-                                                <div class="pswp__preloader__cut">
-                                                    <div class="pswp__preloader__donut"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                                        <div class="pswp__share-tooltip"></div>
-                                    </div>
-                                    <button class="pswp__button pswp__button--arrow--left"
-                                        title="Previous (arrow left)">
-                                    </button>
-                                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                                    </button>
-                                    <div class="pswp__caption">
-                                        <div class="pswp__caption__center"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="upload\aaaaaaaa.jpg" data-lightbox="image-1" data-title="My caption"><img src="upload\aaaaaaaa.jpg" alt=""></a>
                         <a href="index.php"><button class="btn-perso typo-specialelite" type="button">Acceuil</button></a>
                         <a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a>
                         <a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a>
@@ -117,10 +67,6 @@ require_once 'controller\gallery-controller.php';
             </div>
         </div>
     </footer>
-    <!-- Core JS file -->
-    <script src="path/to/photoswipe.min.js"></script>
-    <!-- UI JS file -->
-    <script src="path/to/photoswipe-ui-default.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -131,6 +77,7 @@ require_once 'controller\gallery-controller.php';
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
     <script src="assets/script.js"></script>
+    <script src="path/to/lightbox.js"></script>
 </body>
 
 </html>
