@@ -38,14 +38,16 @@ require_once 'controller\gallery-controller.php';
                 <div class="row col-12 my-5 shadow justify-content-center rounded-lg" id="id-workarea">
                     <!------------------------------------------------- COL GAUCHE ------------------------------->
                     <div class="col-12 border py-2 my-5 rounded-lg text-center">
-                        <h2>Gallerie</h2>
+                        <h2 class="typo-specialelite">Gallerie</h2>
                         <?php 
                         foreach (scandir('upload') as $key => $value){       
                         ?>
                         <a href="upload\<?= $value ?>" data-lightbox="image-1" data-title="Mycaption"><img src="upload\<?= $value ?>" class="vignetteGallery" alt=""></a>
                         <?php }; ?>
+                        <p class="mt-3">
                         <?php if (isset($_SESSION["admin"])){ ?><a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a> <?php }; ?>
                         <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
+                        </p>
                     </div>
                 </div>
             </div>

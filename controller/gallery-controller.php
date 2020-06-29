@@ -6,4 +6,3 @@ if(!(isset($_SESSION['admin']) || isset($_SESSION['guest']))){
 $fileArray = scandir('upload');
 array_shift($fileArray);
 array_shift($fileArray);
-var_dump($fileArray);
