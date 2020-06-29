@@ -64,7 +64,6 @@ require_once 'controller\dashboard-controller.php';
 
                         <p id="messageresult" class="typo-specialelite h5"><b><?= $message ?></b></p>
                         <a href="index.php"><button class="btn-perso typo-specialelite" type="button">Acceuil</button></a>
-                        <a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a>
                         <a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a>
                         <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
                     </div>
