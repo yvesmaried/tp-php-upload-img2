@@ -45,9 +45,6 @@ require_once 'controller\gallery-controller.php';
                         <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
 
 
-                        <a href="upload\aaaaaaaa.jpg" data-lightbox="roadtrip"><img src="upload\aaaaaaaa.jpg" alt=""></a>
-                        <a href="upload\aaaaaaaa.jpg" data-lightbox="roadtrip"><img src="upload\aaaaaaaa.jpg" alt=""></a>
-                        <a href="upload\aaaaaaaa.jpg" data-lightbox="roadtrip"><img src="upload\aaaaaaaa.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
