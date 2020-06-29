@@ -1,5 +1,8 @@
 <?php
-
+if(!isset($_SESSION['admin'])){
+    header("location:no-allowed.php"); // redirection
+    exit; // arrêt du script
+};
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     

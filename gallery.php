@@ -48,9 +48,7 @@ require_once 'controller\gallery-controller.php';
                     <div class="col-12 border py-2 my-5 rounded-lg text-center">
                         <h2>Gallerie</h2>
                         <a href="upload\aaaaaaaa.jpg" data-lightbox="image-1" data-title="My caption"><img src="upload\aaaaaaaa.jpg" alt=""></a>
-                        <a href="index.php"><button class="btn-perso typo-specialelite" type="button">Acceuil</button></a>
-                        <a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a>
-                        <a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a>
+                        <?php if (isset($_SESSION["admin"])){ ?><a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a> <?php }; ?>
                         <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
                     </div>
                 </div>

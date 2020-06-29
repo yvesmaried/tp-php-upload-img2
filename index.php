@@ -37,7 +37,7 @@ require_once 'controller\index-controller.php';
                 <div class="row col-12 my-5 shadow justify-content-center rounded-lg" id="id-workarea">
                     <!------------------------------------------------- COL GAUCHE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 border py-2 my-5 rounded-lg justify-content-center text-center">
-                        <form class="row  justify-content-center " action="index.php" method="post" enctype="multipart/form-data">
+                        <form class="row  justify-content-center " action="" method="post" enctype="multipart/form-data">
                             <div class="form-group col-md-7">
                                 <label class="typo-specialelite font-weight-bold" for="account">Login :</label>
                                 <input class="form-control" id="account" type="text" name="account"
@@ -53,9 +53,7 @@ require_once 'controller\index-controller.php';
                             </div>
                         </form>
                         <p><?= $message ?></p>
-                        <a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a>
-                        <a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a>
-                        <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
+ 
                     </div>
                     <!------------------------------------------------- COL DROITE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 my-5 rounded-lg" onclick="playsound()">

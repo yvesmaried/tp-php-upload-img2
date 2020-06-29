@@ -40,9 +40,10 @@ require_once 'controller\no-allowed-controller.php';
                         <p class="typo-specialelite">Vous n'avez pas les accreditations pour accéder a cette page, il vous faut le laisser passer A38</p>
 
                         <a href="index.php"><button class="btn-perso typo-specialelite" type="button">Acceuil</button></a>
-                        <a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a>
-                        <a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a>
-                        <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
+                        <?php if (isset($_SESSION["admin"]) ){ ?><a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">dashboard</button></a><?php }; ?>
+                        <?php if (isset($_SESSION["guest"]) || isset($_SESSION["admin"]) ){ ?><a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a><?php }; ?>
+                        <?php if (isset($_SESSION["guest"]) || isset($_SESSION["admin"]) ){ ?><a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a><?php }; ?>
+                        
                     </div>
                     <!------------------------------------------------- COL DROITE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 my-5 rounded-lg" onclick="playsound()">

@@ -13,6 +13,11 @@ if (isset($_POST["account"]) && isset($_POST["password"]) ) {
         if (password_verify( $_POST["password"] , $accountArray["guest"] )){
             //login et mdp OK (guest)
             $message = "OK guest";
+            $_SESSION['guest'] = true;
+            if(isset($_SESSION['guest']) && $_SESSION['guest'] == true){
+                header("location:gallery.php"); // redirection
+                exit; // arrêt du script
+            };
 
         } else {
             $message = "login ou mot de passe incorect";
@@ -21,6 +26,11 @@ if (isset($_POST["account"]) && isset($_POST["password"]) ) {
         if (password_verify( $_POST["password"] , $accountArray["admin"] )){
             //login et mdp OK (admin)          
             $message = "OK admin";
+            $_SESSION['admin'] = true;
+            if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
+                header("location:dashboard.php"); // redirection
+                exit; // arrêt du script
+            };
         
         } else {
             $message = "login ou mot de passe incorect";
