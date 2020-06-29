@@ -51,6 +51,11 @@ require_once 'controller\gallery-controller.php';
                         <a href="upload\bovis-shark.jpg" data-lightbox="image-2" data-title="My caption"><img src="upload\bovis-shark.jpg" alt=""></a>
                         <?php if (isset($_SESSION["admin"])){ ?><a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a> <?php }; ?>
                         <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
+
+
+                        <a href="upload\aaaaaaaa.jpg" data-lightbox="roadtrip"><img src="upload\aaaaaaaa.jpg" alt=""></a>
+                        <a href="upload\aaaaaaaa.jpg" data-lightbox="roadtrip"><img src="upload\aaaaaaaa.jpg" alt=""></a>
+                        <a href="upload\aaaaaaaa.jpg" data-lightbox="roadtrip"><img src="upload\aaaaaaaa.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
