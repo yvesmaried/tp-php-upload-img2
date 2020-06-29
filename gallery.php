@@ -44,7 +44,6 @@ require_once 'controller\gallery-controller.php';
                         <?php if (isset($_SESSION["admin"])){ ?><a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a> <?php }; ?>
                         <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
 
-
                     </div>
                 </div>
             </div>
