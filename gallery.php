@@ -12,20 +12,12 @@ require_once 'controller\gallery-controller.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="assets\style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link href="assets/lightbox.css" rel="stylesheet" />
+    <link href="assets\style.css" rel="stylesheet" type="text/css">
     <link href="img\icon.png" rel="icon">
     <title>tp upload</title>
-    <!-- Core CSS file -->
-    <link rel="stylesheet" href="path/to/photoswipe.css">
-
-    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
-     In the folder of skin CSS file there are also:
-     - .png and .svg icons sprite, 
-     - preloader.gif (for browsers that do not support CSS animations) -->
-    <link rel="stylesheet" href="path/to/default-skin/default-skin.css">
-
+ 
 </head>
 
 <body>
@@ -47,8 +39,8 @@ require_once 'controller\gallery-controller.php';
                     <!------------------------------------------------- COL GAUCHE ------------------------------->
                     <div class="col-12 border py-2 my-5 rounded-lg text-center">
                         <h2>Gallerie</h2>
-                        <a href="upload\aaaaaaaa.jpg" data-lightbox="image-1" data-title="My caption"><img src="upload\aaaaaaaa.jpg" alt=""></a>
-                        <a href="upload\bovis-shark.jpg" data-lightbox="image-2" data-title="My caption"><img src="upload\bovis-shark.jpg" alt=""></a>
+                        <a href="upload\aaaaaaaa.jpg" data-lightbox="image-1" data-title="Mycaption"><img src="upload\aaaaaaaa.jpg" class="vignetteGallery" alt=""></a>
+                        <a href="upload\bovis-shark.jpg" data-lightbox="image-1" data-title="Mycaption"><img src="upload\bovis-shark.jpg" class="vignetteGallery" alt=""></a>
                         <?php if (isset($_SESSION["admin"])){ ?><a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a> <?php }; ?>
                         <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
                     </div>
@@ -66,16 +58,15 @@ require_once 'controller\gallery-controller.php';
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
-    <script src="assets/script.js"></script>
+    <!-- <script src="assets/script.js"></script> -->
+    
     <script src="assets/lightbox.js"></script>
 </body>
 
