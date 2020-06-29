@@ -58,3 +58,8 @@
     background-color: darksalmon;
     width: 50%;
 }
+
+.vignetteGallery {
+    height: 10rem;
+    width: auto;
+}
