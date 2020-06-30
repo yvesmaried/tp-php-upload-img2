@@ -21,12 +21,17 @@ require_once 'controller\no-allowed-controller.php';
 
     <!------------------------------------------------- HEADER ------------------------------->
     <header>
-        <div id="img-accueil" class="container-fluid">
-            <div class="row justify-content-lg-start justify-content-center text-center">
+        <div id="img-accueil" class="container-fluid position-relative">
+            <div class="row">
                 <div class="col-12 justify-content-center text-center">
                     <h1 class="typo-specialelite" id="titreHeader">Bovis-Shark</h1>
                 </div>
             </div>
+            <?php if (isset($_SESSION["guest"]) || isset($_SESSION["admin"]) ){ ?>
+            <div class="bottom-header">
+                <a class="" href="deconnexion.php"><button class="btn-deco typo-specialelite" type="button">Déconnexion</button></a>
+            </div>
+            <?php }; ?>
         </div>
     </header>
     <!------------------------------------------------- MAIN ------------------------------->
@@ -42,8 +47,6 @@ require_once 'controller\no-allowed-controller.php';
                         <a href="index.php"><button class="btn-perso typo-specialelite" type="button">Acceuil</button></a>
                         <?php if (isset($_SESSION["admin"]) ){ ?><a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">dashboard</button></a><?php }; ?>
                         <?php if (isset($_SESSION["guest"]) || isset($_SESSION["admin"]) ){ ?><a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a><?php }; ?>
-                        <?php if (isset($_SESSION["guest"]) || isset($_SESSION["admin"]) ){ ?><a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a><?php }; ?>
-                        
                     </div>
                     <!------------------------------------------------- COL DROITE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 my-5 rounded-lg" onclick="playsound()">

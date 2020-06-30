@@ -23,11 +23,14 @@ require_once 'controller\gallery-controller.php';
 <body>
     <!------------------------------------------------- HEADER ------------------------------->
     <header>
-        <div id="img-accueil" class="container-fluid">
-            <div class="row justify-content-lg-start justify-content-center text-center">
+        <div id="img-accueil" class="container-fluid position-relative">
+            <div class="row">
                 <div class="col-12 justify-content-center text-center">
                     <h1 class="typo-specialelite" id="titreHeader">Bovis-Shark</h1>
                 </div>
+            </div>
+            <div class="bottom-header">
+                <a class="" href="deconnexion.php"><button class="btn-deco typo-specialelite" type="button">Déconnexion</button></a>
             </div>
         </div>
     </header>
@@ -36,19 +39,25 @@ require_once 'controller\gallery-controller.php';
         <div class="container">
             <div class="row justify-content-center">
                 <div class="row col-12 my-5 shadow justify-content-center rounded-lg" id="id-workarea">
-                    <!------------------------------------------------- COL GAUCHE ------------------------------->
-                    <div class="col-12 border py-2 my-5 rounded-lg text-center">
+                    <!------------------------------------------------- COL principal ------------------------------->
+                    <div class="col-12 border py-4 my-5 rounded-lg text-center">
                         <h2 class="typo-specialelite">Gallerie</h2>
                         <?php 
                         foreach (scandir('upload') as $key => $value){       
                         ?>
                         <a href="upload\<?= $value ?>" data-lightbox="image-1" data-title="Mycaption"><img src="upload\<?= $value ?>" class="vignetteGallery" alt=""></a>
                         <?php }; ?>
+
+                    </div>
+                    <?php if (isset($_SESSION["admin"])){ ?>
+                    <div class="col-12 border py-4 my-5 rounded-lg text-center">
+                        <h2 class="typo-specialelite">Panel Admin</h2>
+                        <p><b class="typo-specialelite">Taille dossier : </b><?= round((TailleDossier("upload") / (1024 * 1024)), 2) ?>Mo / <?= round(($maxFolderSize / (1024 * 1024)), 2) ?>Mo.</p>
                         <p class="mt-3">
-                        <?php if (isset($_SESSION["admin"])){ ?><a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a> <?php }; ?>
-                        <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
+                        <a href="dashboard.php"><button class="btn-perso typo-specialelite" type="button">Dashboard</button></a> 
                         </p>
                     </div>
+                    <?php }; ?>
                 </div>
             </div>
         </div>

@@ -18,14 +18,17 @@ require_once 'controller\dashboard-controller.php';
 </head>
 
 <body>
-    
+
     <!------------------------------------------------- HEADER ------------------------------->
     <header>
-        <div id="img-accueil" class="container-fluid">
-            <div class="row justify-content-lg-start justify-content-center text-center">
+        <div id="img-accueil" class="container-fluid position-relative">
+            <div class="row">
                 <div class="col-12 justify-content-center text-center">
                     <h1 class="typo-specialelite" id="titreHeader">Bovis-Shark</h1>
                 </div>
+            </div>
+            <div class="bottom-header">
+                <a class="" href="deconnexion.php"><button class="btn-deco typo-specialelite" type="button">Déconnexion</button></a>
             </div>
         </div>
     </header>
@@ -63,14 +66,11 @@ require_once 'controller\dashboard-controller.php';
                         </form>
 
                         <p id="messageresult" class="typo-specialelite h5"><b><?= $message ?></b></p>
-                        <a href="index.php"><button class="btn-perso typo-specialelite" type="button">Acceuil</button></a>
                         <a href="gallery.php"><button class="btn-perso typo-specialelite" type="button">Galerie</button></a>
-                        <a href="deconnexion.php"><button class="btn-perso typo-specialelite" type="button">deconnexion</button></a>
                     </div>
                     <!------------------------------------------------- COL DROITE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 my-5 rounded-lg" onclick="playsound()">
-                        <img class="rounded-lg" src="img\cover-crop-circle.jpg" alt="cover-crop-circle-Astronogeek"
-                            width="100%">
+                        <img class="rounded-lg" src="img\cover-crop-circle.jpg" alt="cover-crop-circle-Astronogeek" width="100%">
                     </div>
                 </div>
             </div>

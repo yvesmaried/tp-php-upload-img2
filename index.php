@@ -37,16 +37,16 @@ require_once 'controller\index-controller.php';
                 <div class="row col-12 my-5 shadow justify-content-center rounded-lg" id="id-workarea">
                     <!------------------------------------------------- COL GAUCHE ------------------------------->
                     <div class="col-12 col-sm-10 col-md-6 border py-2 my-5 rounded-lg justify-content-center text-center">
-                        <form class="row  justify-content-center " action="" method="post" enctype="multipart/form-data">
+                        <form class="row justify-content-center" action="" method="post" enctype="multipart/form-data">
                             <div class="form-group col-md-7">
                                 <label class="typo-specialelite font-weight-bold" for="account">Login :</label>
                                 <input class="form-control" id="account" type="text" name="account"
-                                    placeholder="nom de compte">
+                                    placeholder="nom de compte" required>
                             </div>
                             <div class="form-group col-md-7">
                                 <label class="typo-specialelite font-weight-bold" for="password">Password :</label>
                                 <input class="form-control" id="password" type="password" name="password"
-                                    placeholder="mot de passe">
+                                    placeholder="mot de passe" required>
                             </div>
                             <div class="col-md-7">
                                 <input class="btn-perso typo-specialelite" type="submit" value="connexion">

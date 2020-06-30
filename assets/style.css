@@ -5,7 +5,7 @@
     background-attachment: fixed;
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
 }
 
 #titreHeader {
@@ -53,13 +53,20 @@
     border: solid 2px rgb(82, 134, 30);
     background-color: chartreuse;
 }
-.test{
-    height: 100px;
-    background-color: darksalmon;
-    width: 50%;
+.btn-deco{
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    /* color: chartreuse; */
+    border: solid 2px #0d4662;
+    background-color: #0f8dcc;
 }
 
 .vignetteGallery {
     height: 10rem;
     width: auto;
+}
+.bottom-header{
+    position: absolute;
+    bottom: 5px;
+    right: 12%;
 }
